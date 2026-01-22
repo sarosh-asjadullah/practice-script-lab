@@ -46,8 +46,11 @@ python3 firewall_check.py
 
 ## 📈 Learning Objectives
 
-This project was built while following the Google Cybersecurity Professional Certificate curriculum to bridge the gap between basic Python programming and practical security operations.
+This project was built while following the Google Cybersecurity Professional Certificate curriculum to bridge the gap between basic Python programming and practical security operations. URL for YouTube Video
+```bash
+https://youtu.be/4pe1fn3Gus0?si=_Ky1ppYuan016mrB
 
+```
 * **Automation:** Reducing manual effort in log review.
 * **Data Integrity:** Ensuring forensic data is parsed without modification.
 * **Scalability:** Handling thousands of entries that would be impossible to review by hand.
