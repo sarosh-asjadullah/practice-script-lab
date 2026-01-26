@@ -1,3 +1,72 @@
+#Print Hello Python 
+print("Hello Python!")
+
+#Determine boolean values
+print(9<5)
+print(9<12)
+
+#Print a list
+print(["dtanka","mabadi","aestrada"])
+
+#Use a variable to store a device ID
+device_id = "h32rb17"
+print(device_id)
+
+print("m50pi31")
+
+#use the type function 
+device_id = "h32rb17"
+
+data_type = type (device_id)
+print(data_type)
+
+#Demonstrate a type error
+#device_id = "h32rb17"
+#number = 3
+#print(device_id + number)
+
+#Reassign a variable
+
+device_id = "h32rb17"
+print(device_id)
+
+device_id = "n73ab07"
+print(device_id)
+
+#if starts a conditional statement
+
+#create a conditional
+operating_system = "OS 2"
+if operating_system == "OS 2" :
+    print("Update Needed")
+
+
+# Add an esle statement
+print("Testing Else")
+operating_system = "OS 3"
+if operating_system == "OS 2":
+    print("Update Needed")
+else:
+    print("No update Needed")
+
+#Iterative Statement - Run forloop with range
+for i in range (10):
+    print ("Cannot connect to the destination.")
+
+#Iterative Statement - Run while loop 
+time = 0
+while time <= 10:
+    print(time)
+    time = time + 2
+
+max_device = 5
+i = 1
+while i < max_device:
+    print("User can still connect to additional devices")
+    i = i+1
+print ("User has reached maximum number of connected devices")
+
+
 # Define a function 
 def greet_employee():
     print("Welcome! You're logged in.")
