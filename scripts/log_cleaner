@@ -1,0 +1,20 @@
+input_data = " 192.168.1.1, admin , LOGIN_SUCCESS , 2023-10-01 "
+split_data = input_data.split(",")
+clean_data = []
+print(split_data)
+
+for i in split_data:
+    temp_data = i.strip().lower()
+    clean_data.append(temp_data)
+
+
+
+#clear_input_data = split_data.strip()
+#print(split_data)
+#print(clear_input_data)
+
+
+if len(clean_data) < 4:
+    print("[!] Error: Corrupt log entry detected.")
+else:
+    print(f"[+] Cleaned Log Entry: {clean_data}")
