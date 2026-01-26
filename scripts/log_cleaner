@@ -1,20 +1,26 @@
-input_data = " 192.168.1.1, admin , LOGIN_SUCCESS , 2023-10-01 "
-split_data = input_data.split(",")
-clean_data = []
-print(split_data)
+"""
+Script: log_cleaner.py
+Purpose: Normalizes messy, comma-separated log strings into clean, usable lists.
+"""
 
-for i in split_data:
-    temp_data = i.strip().lower()
-    clean_data.append(temp_data)
+# 1. The Raw, "Dirty" Artifact
+input_data = "  192.168.1.1, admin , LOGIN_SUCCESS , 2023-10-01  "
 
+# 2. Step-by-Step Cleaning
+# We split by the comma so we get individual fields
+raw_list = input_data.split(",")
 
+# 3. Clean every item in the list at once (List Comprehension)
+# This strips whitespace from every element and converts to lowercase
+clean_list = [item.strip().lower() for item in raw_list]
 
-#clear_input_data = split_data.strip()
-#print(split_data)
-#print(clear_input_data)
-
-
-if len(clean_data) < 4:
-    print("[!] Error: Corrupt log entry detected.")
+# 4. Forensic Integrity Check
+# A valid log must have exactly 4 parts: IP, User, Status, Date
+if len(clean_list) != 4:
+    print(f"[!] ALERT: Corrupt log entry detected. Expected 4 fields, got {len(clean_list)}.")
 else:
-    print(f"[+] Cleaned Log Entry: {clean_data}")
+    print(f"[+] Cleaned Log Entry: {clean_list}")
+
+# 5. Accessing Specific Data
+print(f"Investigating User: {clean_list[1]}")
+print(f"Event Status: {clean_list[2]}")
