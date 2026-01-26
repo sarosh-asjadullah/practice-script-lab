@@ -255,3 +255,62 @@ print(re.findall(r"\w+@\w+\.\w+",email_log))
 paragraph = "The servers at 10.0.0.1 and 10.0.0.254 forward traffic to 172.16.0.1, while client devices like 192.168.0.10, 192.168.0.11, and 192.168.1.5 connect through gateways 192.168.0.1 and 192.168.1.1; external services run on 8.8.8.8, 1.1.1.1, 203.0.113.5, and 198.51.100.42, and backup nodes 10.1.1.1, 10.1.1.2, and 10.2.2.2 synchronize logs with monitoring hosts at 192.0.2.1 and 192.0.2.2."
 
 print(re.findall(r"(?:(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)",paragraph))
+
+#Automation 
+#with Handles error and manages external resources, python knows automatically release resource
+#with open ("Login_attempts.txt","r") as file:
+
+#open a text file
+with open("C:\\Users\\User\\Documents\\Python_Learning\\login_attempts.txt","r") as file:
+    #.read() method converts file into strings
+    file_text = file.read()
+
+print (file_text)
+
+#parsing files - The process of converting data into a more readable format
+#.split() This method converts a string into a list
+
+with open("C:\\Users\\User\\Documents\\Python_Learning\\login_attempts.txt","r") as file:
+    #.read() method converts file into strings
+    file_text = file.read()
+
+word_list = file_text.split()
+print(word_list)
+
+#Create a function that counts a word occurance number
+def word_check(wordlist,current_word):
+    counter = 0
+    for i in word_list:
+        if i == current_word:
+            counter = counter + 1
+    print(f"\nthe word {current_word} repeats {counter} times in the list.")
+        
+word_check(word_list,"a")
+
+'''
+#Open, read, and split a text file 
+with open("Login_attemps.txt","r") as file:
+    file_text = file.read()
+usernames = file_text.split()
+
+#Create a function that counts a user's failed login attempts
+def login_check(login_list,current_user):
+    counter = 0
+    for i in login_list:
+        if i == current_user:
+            counter = counter + 1
+        if counter >= 3:
+            return "You have tried to login three or more times. Your account has been locked"
+        else:
+            return"You may log in!"
+
+login_check(username,"John")
+'''
+
+
+#Types of error
+#Syntax Errors - Invalid usage of Python Language
+#Logic Errors - May not cause error can create wrong output
+#Exceptions - When program doesnt know how to run the code
+
+
