@@ -24,7 +24,7 @@ This repository contains a series of Python scripts developed to automate common
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/practice-script-lab.git
+git clone https://github.com/sarosh-asjadullah/practice-script-lab.git
 
 ```
 
