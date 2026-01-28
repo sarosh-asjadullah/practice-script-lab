@@ -1,9 +1,11 @@
-import re
+
 
 """
 DFIR Tool: IP Pattern Extractor
 Description: Scans unstructured data for valid IPv4 addresses using high-fidelity regex.
 """
+#Import Regex Module
+import re 
 
 # Define paths
 
